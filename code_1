@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    long long N;
+    cout << "Enter a natural number N: ";
+    cin >> N;
+
+    if (N <= 0) {
+        cout << "Error: N must be a natural number (N > 0)." << endl;
+        return 1;
+    }
+
+    int count = 0;
+    long long temp = N;
+
+    while (temp > 0) {
+        int digit = temp % 10;
+        if (digit > 3) {
+            count++;
+        }
+        temp /= 10;
+    }
+
+    cout << "Count of digits greater than 3: " << count << endl;
+
+    cout << "Press Enter to exit...";
+    cin.ignore();
+    cin.get();
+    return 0;
+}
