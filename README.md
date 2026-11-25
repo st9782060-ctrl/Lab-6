@@ -21,19 +21,3 @@ flowchart TD
     H -- Ні --> K["temp = temp / 10"]
     I --> K
     K --> F
-
-flowchart TD
-    A([Початок]) --> B[/Введення N/]
-    B --> C{N <= 0?}
-    C -- Так --> D[/Виведення помилки/]
-    D --> Z([Кінець])
-    C -- Ні --> E["count = 0<br/>temp = N"]
-    E --> F{temp > 0?}
-    F -- Ні --> J[/Виведення count/]
-    J --> Z
-    F -- Так --> G["digit = temp % 10"]
-    G --> H{digit > 3?}
-    H -- Так --> I["count = count + 1"]
-    H -- Ні --> K["temp = temp / 10"]
-    I --> K
-    K --> F
